@@ -258,7 +258,7 @@ jobs:
         -G Ninja -D USE_SEQ=ON -D USE_MPI=ON -D USE_OMP=ON -D USE_TBB=ON -D USE_STL=ON
         -D USE_FUNC_TESTS=ON -D USE_PERF_TESTS=ON
         -D USE_COVERAGE=ON
-        -D CMAKE_BUILD_TYPE=RELEASE
+        -D CMAKE_BUILD_TYPE=DEBUG
       env:
         CC: gcc-12
         CXX: g++-12
