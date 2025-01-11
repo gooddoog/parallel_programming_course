@@ -669,7 +669,7 @@ jobs:
         lcov --capture --directory . --output-file ../coverage.info
         lcov --remove ../coverage.info '*/3rdparty/*' '/usr/*' '*/perf_tests/*' '*/func_tests/*' --output-file ../coverage.info
         cd ..
-        genhtml coverage.info --output-directory cov-report
+        genhtml coverage.info --output-directory cov-report --ignore-errors mismatch --rc geninfo_unexecuted_blocks=1
     - name: Upload coverage report artifact
       uses: actions/upload-artifact@v4
       with:
